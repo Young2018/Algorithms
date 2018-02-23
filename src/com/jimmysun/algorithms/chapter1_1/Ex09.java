@@ -10,9 +10,9 @@ public class Ex09 {
         char[] result = new char[bufLen];
         do {
             // 使用 & 符合相对除 2 提升一定性能
-            result[--index] = '0' + (value & 1);
-            value = value >>> 1;
-        } while (value != 0);
+            result[--index] = (char) ('0' + (N & 1));
+            N = N >>> 1;
+        } while (N != 0);
         return new String(result, index, bufLen - index);
     }
     
